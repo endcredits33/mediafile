@@ -1935,6 +1935,7 @@ class MediaFile(object):
 
     label = MediaField(
         MP3StorageStyle("TPUB"),
+        MP3ListDescStorage("LABEL"),
         MP4StorageStyle("----:com.apple.iTunes:LABEL"),
         MP4StorageStyle("----:com.apple.iTunes:publisher"),
         MP4StorageStyle("----:com.apple.iTunes:Label", read_only=True),
@@ -2034,6 +2035,7 @@ class MediaFile(object):
     )
     media = MediaField(
         MP3StorageStyle("TMED"),
+        MP3DescStorageStyle("MEDIA"),
         MP4StorageStyle("----:com.apple.iTunes:MEDIA"),
         StorageStyle("MEDIA"),
         ASFStorageStyle("WM/Media"),
